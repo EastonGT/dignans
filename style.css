@@ -1,0 +1,335 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FAF9F6; /* Secondary: Off-white */
+    color: #333; /* Default text color */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.header {
+    background-color: #F2C849;
+    padding: 20px 0;
+}
+
+.header-top {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    font-size: 0.9em;
+    line-height: 1.5;
+    text-align: right;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 60px; /* Adjust logo size */
+}
+
+.nav-links a {
+    color: #5C3A21; /* Accent: Dark brown */
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+/* Hero Section Styles */
+.hero {
+    padding: 50px 0;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #5C3A21;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.buttons button {
+    background-color: #5C3A21;
+    color: #FAF9F6;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #4A2E1A; /* Darker brown on hover */
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 40%;
+}
+
+.hero-image img {
+    width: 100%;
+    display: block;
+}
+
+
+/* About page styles */
+
+.about {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+}
+
+.shop img {
+    width: 100%;
+    height: 100%;
+}
+
+.about-text {
+    font-size: medium;
+    text-align: center;
+    padding:25px 25px 25px 25px;
+}
+
+/* Contact Form Styles */
+.contact {
+    padding: 50px 0;
+}
+
+.contact h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #5C3A21;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #FAF9F6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #5C3A21;
+    color: #FAF9F6;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #4A2E1A; /* Darker brown on hover */
+}
+
+
+/* Footer Styles */
+.footer {
+    background-color: #FAF9F6;
+    padding: 30px 0;
+    border-top: 1px solid #ddd;
+}
+
+.footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #5C3A21;
+    text-decoration: none;
+}
+
+.footer-links a {
+    color: #5C3A21;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.social-icons a {
+    color: #5C3A21;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-image {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links, .social-icons {
+        margin-top: 10px;
+    }
+
+    /* Additional about page mobile styles, as this was the only page that wasn't responsive on mobile */
+    .about {
+    grid-template-columns: 1fr;
+    }
+    
+    .shop {
+    order: 1;
+    }
+    
+    .about-text {
+    order: 2;
+    }
+    }
+    
+
+    /* CSS to create a printable menu page */
+
+    @media print {
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #000;
+            background: none;
+        }
+        .menu-section {
+            page-break-inside: avoid;
+        }
+        .menu-section h3 {
+            color: #000;
+        }
+        .menu-section ul li {
+            background: none;
+            border: none;
+        }
+        .no-print {
+            display: none;
+        }
+    }
+
+    /* Special Offers Page Styles */
+.special-offers {
+    padding: 50px 0;
+}
+
+.special-offers h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #5C3A21;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.offer {
+    background-color: #FAF9F6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.offer h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #5C3A21;
+    margin-bottom: 10px;
+}
+
+.offer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.offer ul li {
+    background-color: #FFF;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.offer ul li:last-child {
+    border-bottom: none;
+}
+
+.offer p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
